@@ -1,110 +1,133 @@
-#常用git命令
+常用git命令
+==========================
 
-##取得Git仓库
+取得Git仓库
+==========================
 
-###初始化一个版本仓库
-`git init`
+初始化一个版本仓库
+--------------------------
+>`git init`
 
-###Clone远程版本库
-`git clone http://120.52.145.147/ziker/wechat.git`
+Clone远程版本库
+--------------------------
+>`git clone http://120.52.145.147/ziker/wechat.git`
 
-###添加远程版本库origin
-语法为 git remote add [shortname] [url]
+添加远程版本库origin
+--------------------------
+>语法为 git remote add [shortname] [url]
 
-`git remote add origin http://120.52.145.147/ziker/wechat.git`
+>`git remote add origin http://120.52.145.147/ziker/wechat.git`
 
-###查看远程仓库
+查看远程仓库
+--------------------------
+>`git remote -v`
 
-`git remote -v`
+提交你的修改
+==========================
+添加当前修改的文件到暂存区
+--------------------------
+>`git add .`
 
-##提交你的修改
+如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件
+--------------------------
+>`git add -u`
 
-###添加当前修改的文件到暂存区
-`git add .`
+提交你的修改
+--------------------------
+>`git commit –m <你的注释>`
 
-###如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件
-`git add -u`
+推送你的更新到远程服务器
+--------------------------
+>语法为 git push [远程名] [本地分支]:[远程分支]
 
-###提交你的修改
-`git commit –m <你的注释>`
+>`git push origin master`
 
-###推送你的更新到远程服务器
-语法为 git push [远程名] [本地分支]:[远程分支]
+查看文件状态
+--------------------------
+>`git status`
 
-`git push origin master`
+从当前跟踪列表移除文件，并完全删除
+--------------------------
+>`git rm readme.txt`
 
-###查看文件状态
-`git status`
+仅在暂存区删除，保留文件在当前目录，不再跟踪
+>`git rm –cached readme.txt`
 
-###跟踪新文件
-`git add readme.txt`
+重命名文件
+--------------------------
+>`git mv readme.txt readme`
 
-###从当前跟踪列表移除文件，并完全删除
-`git rm readme.txt`
+查看提交的历史记录
+--------------------------
+>`git log`
 
-###仅在暂存区删除，保留文件在当前目录，不再跟踪
-`git rm –cached readme.txt`
+修改最后一次提交注释的，利用–amend参数
+--------------------------
+>`git commit --amend`
 
-###重命名文件
-`git mv readme.txt readme`
+忘记提交某些修改，下面的三条命令只会得到一个提交。
+--------------------------
+>`git commit –m <add readme.txt>`
 
-###查看提交的历史记录
-`git log`
+>`git add readme_forgotten`
 
-###修改最后一次提交注释的，利用–amend参数
-`git commit --amend`
+>`git commit –amend`
 
-###忘记提交某些修改，下面的三条命令只会得到一个提交。
-git commit –m <add readme.txt>
+>假设你已经使用git add .，将修改过的文件a、b加到暂存区
 
-git add readme_forgotten
+>现在你只想提交a文件，不想提交b文件，应该这样
 
-git commit –amend
+>`git reset HEAD b`
 
-假设你已经使用git add .，将修改过的文件a、b加到暂存区
+取消对文件的修改
+--------------------------
+>`git checkout –- readme.txt`
 
-现在你只想提交a文件，不想提交b文件，应该这样
-`git reset HEAD b`
+基本的分支管理
+==========================
+创建一个分支
+--------------------------
+>`git branch iss53`
 
-###取消对文件的修改
-`git checkout –- readme.txt`
+切换工作目录到iss53
+--------------------------
+>`git chekcout iss53`
 
-##基本的分支管理
+将上面的命令合在一起，创建iss53分支并切换到iss53
+--------------------------
+>`git chekcout –b iss53`
 
-###创建一个分支
-`git branch iss53`
+合并iss53分支，当前工作目录为master
+--------------------------
+>`git merge iss53`
 
-###切换工作目录到iss53
-`git chekcout iss53`
+合并完成后，没有出现冲突，删除iss53分支
+--------------------------
+>`git branch –d iss53`
 
-###将上面的命令合在一起，创建iss53分支并切换到iss53
-`git chekcout –b iss53`
+拉去远程仓库的数据
+--------------------------
+>语法为 git fetch [remote-name]
+>`git fetch`
 
-###合并iss53分支，当前工作目录为master
-`git merge iss53`
+fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并
+>`git pull`
 
-###合并完成后，没有出现冲突，删除iss53分支
-`git branch –d iss53`
+查看远程仓库的信息
+--------------------------
+>`git remote show origin`
 
-###拉去远程仓库的数据，语法为 git fetch [remote-name]
-`git fetch`
-
-###fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并
-`git pull`
-
-###查看远程仓库的信息
-`git remote show origin`
-
-###建立本地的dev分支追踪远程仓库的develop分支
-`git checkout –b dev origin/develop`
+建立本地的dev分支追踪远程仓库的develop分支
+--------------------------
+>`git checkout –b dev origin/develop`
 
 
 #参考资料
-##Git教程
+Git教程
 http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
-##Git 版本管理工具（一）
+Git 版本管理工具（一）
 http://blog.csdn.net/sunboy_2050/article/details/7527877
-##Git 常用命令详解（二）
+Git 常用命令详解（二）
 http://blog.csdn.net/sunboy_2050/article/details/7529022
-##Git 常用命令速查表（三）
+Git 常用命令速查表（三）
 http://blog.csdn.net/sunboy_2050/article/details/7529841
