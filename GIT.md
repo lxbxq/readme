@@ -122,12 +122,13 @@ fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下�
 >`git checkout –b dev origin/develop`
 
 
-#参考资料
-Git教程
+# 参考资料
+## Git教程
 http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
-Git 版本管理工具（一）
+
+## Git 版本管理工具（一）
 http://blog.csdn.net/sunboy_2050/article/details/7527877
-Git 常用命令详解（二）
+## Git 常用命令详解（二）
 http://blog.csdn.net/sunboy_2050/article/details/7529022
-Git 常用命令速查表（三）
+## Git 常用命令速查表（三）
 http://blog.csdn.net/sunboy_2050/article/details/7529841
