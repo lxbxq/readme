@@ -32,10 +32,12 @@ jenkies
 
 Maven 镜像配置
 --------------------------
-> 修改setting.xml 的<mirrors> 加入以下配置
->   <mirror>
->      <id>nexus</id>
->      <mirrorOf>*</mirrorOf>
->      <name>Human Readable Name for this Mirror.</name>
->      <url>http://localhost:8181/nexus/content/groups/public/</url>
->   </mirror>
+
+` 修改setting.xml 的<mirrors> 加入以下配置
+   <mirror>
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <name>Human Readable Name for this Mirror.</name>
+      <url>http://localhost:8181/nexus/content/groups/public/</url>
+   </mirror>
+`
