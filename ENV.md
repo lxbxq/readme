@@ -38,6 +38,6 @@ Maven 镜像配置
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <name>Human Readable Name for this Mirror.</name>
-      <url>http://localhost:8181/nexus/content/groups/public/</url>
+      <url>http://192.168.1.5:8181/nexus/content/groups/public/</url>
    </mirror>
 ```
