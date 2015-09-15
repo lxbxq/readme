@@ -32,7 +32,7 @@ jenkies
 
 Maven 镜像配置
 --------------------------
->修改setting.xml 的<mirrors> 加入以下配置
+>修改setting.xml 的`<mirrors>` 加入以下配置
 ```javascript
    <mirror>
       <id>nexus</id>
