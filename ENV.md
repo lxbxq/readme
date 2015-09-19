@@ -21,9 +21,21 @@ sonar
 
 >后端服务端口：9000
 
+rap
+--------------------------
+>http://120.52.145.147:8080
+
+>部署路径：/www/apache-tomcat-7.0.59/webapps/ROOT
+
+>快速学习教程： http://thx.github.io/RAP/study.html#
+
+>Mockjs学习：http://mockjs.com/
+
 jenkies
 --------------------------
 >http://120.52.145.147:8080/jenkins
+
+>部署路径：/www/apache-tomcat-7.0.59/webapps/jenkins
 
 本地文件共享服务器 
 --------------------------
