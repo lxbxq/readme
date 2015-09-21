@@ -39,7 +39,7 @@ jenkies
 
 本地文件共享服务器 
 --------------------------
-> \\\\192.168.1.5\share
+> \\\\192.168.1.122\share
 
 >或者
 
@@ -53,6 +53,6 @@ Maven 镜像配置
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <name>Human Readable Name for this Mirror.</name>
-      <url>http://192.168.1.5:8181/nexus/content/groups/public/</url>
+      <url>http://192.168.1.122:8181/nexus/content/groups/public/</url>
    </mirror>
 ```
