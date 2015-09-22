@@ -54,3 +54,15 @@
 >语法为 \i filePath;
 
 >`\i d:/my.sql;`
+
+# 本地环境数据库创建
+## 脚本
+> 请按顺序执行，并根据本地环境修改路径。
+> \i D:/work/ziker/ziker/db/pg/share/1.0/share_database.sql;
+
+
+> \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_1000_ziker-common.sql;
+
+> \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_2000_ziker-user.sql;
+
+> \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_3000_ziker-datasource.sql;
