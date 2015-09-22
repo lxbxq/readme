@@ -57,7 +57,7 @@
 
 # 本地环境数据库创建
 ## 脚本
-> 请按顺序执行，并根据本地环境修改路径。
+> 请按顺序执行,并根据本地环境修改路径。
 > \i D:/work/ziker/ziker/db/pg/share/1.0/share_database.sql;
 
 
