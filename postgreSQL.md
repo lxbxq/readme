@@ -1,65 +1,78 @@
-# ³£ÓÃpostgreSQL²Ù×÷
->°²×°³ÌÐò´æ·ÅÔÚ¹²ÏíÄ¿Â¼ÖÐ£º\\192.168.1.5\share\postgreSQL
+# å¸¸ç”¨postgreSQLæ“ä½œ
+
+----------
+
+
+> å®‰è£…ç¨‹åºå­˜æ”¾åœ¨å…±äº«ç›®å½•ä¸­ï¼š\\192.168.1.5\share\postgreSQL
 ## DDL
-### ´´½¨Êý¾Ý¿â
->Óï·¨Îªcreate database dbname;
+### åˆ›å»ºæ•°æ®åº“
+
+> è¯­æ³•ä¸ºcreate database dbname;
 
 >`create database ziker`;
 
->Óï·¨Îªcreatedb [option...] [dbname [description]]
+> è¯­æ³•ä¸ºcreatedb [option...] [dbname [description]]
 
 >`createdb -h localhost -p 5432 -U postgress ziker;`
 
-### Ä¬ÈÏÊ¹ÓÃÄ£°å¿âtemplate1,¿ÉÒÔÊÖ¹¤Ö¸¶¨template0
->`create database db2 template template0`
-### ¸´ÖÆ¿â
->`create database db3 template db2`
+### é»˜è®¤ä½¿ç”¨æ¨¡æ¿åº“template1,å¯ä»¥æ‰‹å·¥æŒ‡å®štemplate0
 
-### Ñ¡ÔñÊý¾Ý¿â
+> `create database db2 template template0`
+### å¤åˆ¶åº“
 
-> Óï·¨Îª:\c dbname; 
-> 
->`\c ziker;`
-### É¾³ýÊý¾Ý¿â
->Óï·¨Îª:drop database [if exists] dbname;
+> `create database db3 template db2`
+
+### é€‰æ‹©æ•°æ®åº“
+
+> è¯­æ³•ä¸º:\c dbname; 
+
+> `\c ziker;`
+### åˆ é™¤æ•°æ®åº“
+>è¯­æ³•ä¸º:drop database [if exists] dbname;
 
 >`drop database db3;`
 
-### ´´½¨±í
->Óï·¨Îª£ºcreate table table_name(column1 datatype,column2 datatype,.....,columnN datatype,primary key (one or more columns));
+### åˆ›å»ºè¡¨
+
+> è¯­æ³•ä¸ºï¼šcreate table table_name(column1 datatype,column2 datatype,.....,columnN datatype,primary key (one or more columns));
 
 >`create table wechat_agent (id int primary key not null,agent_name text not null);`
-### ÐÞ¸Ä±í
-### É¾³ý±í
->Óï·¨Îª drop table table_name;
+### ä¿®æ”¹è¡¨
+### åˆ é™¤è¡¨
+>è¯­æ³•ä¸º drop table table_name;
 
 >`drop table wechat_agent;`
 
-## DML(Í¬ÆäËûÊý¾Ý¿â)
-### ÐÂÔö
-### ÐÞ¸Ä
-### ²éÑ¯
-### É¾³ý
+## DML(åŒå…¶ä»–æ•°æ®åº“)
+### æ–°å¢ž
+### ä¿®æ”¹
+### æŸ¥è¯¢
+### åˆ é™¤
 
-## ³£Á¿
-### ÈÕÆÚ
+### å¸¸é‡
+### æ—¥æœŸ
 >`select current_date;`
-### Ê±¼ä
+### æ—¶é—´
 >`select current_time;`
-### ÈÕÆÚ+Ê±¼ä
+### æ—¥æœŸ+æ—¶é—´
 >`select current_timestamp;`
 
-## ÎÄ¼þÖ´ÐÐ
-### ½Å±¾ÎÄ¼þ
->Óï·¨Îª \i filePath;
+## æ–‡ä»¶æ‰§è¡Œ
+### è„šæœ¬æ–‡ä»¶
 
->`\i d:/my.sql;`
+> è¯­æ³•ä¸º: \i filePath;
 
-# ±¾µØ»·¾³Êý¾Ý¿â´´½¨
-## ½Å±¾
-> Çë°´Ë³ÐòÖ´ÐÐ,²¢¸ù¾Ý±¾µØ»·¾³ÐÞ¸ÄÂ·¾¶¡£
+> `\i d:/my.sql;`
 
-> \i D:/work/ziker/ziker/db/pg/share/1.0/share_database.sql;
+# æœ¬åœ°çŽ¯å¢ƒæ•°æ®åº“åˆ›å»º(ä¸åšç§»äº¤ä½¿ç”¨) #
+
+----------
+
+## è„šæœ¬ ##
+### å…±äº«åº“è„šæœ¬ ###
+> `è¯·æŒ‰é¡ºåºæ‰§è¡Œ,å¹¶æ ¹æ®æœ¬åœ°çŽ¯å¢ƒä¿®æ”¹è·¯å¾„ã€‚`
+
+> \i D:/work/ziker/ziker/db/pg/share/1.0/share_database.sql;'
 
 
 > \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_1000_ziker-common.sql;
@@ -67,3 +80,13 @@
 > \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_2000_ziker-user.sql;
 
 > \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_3000_ziker-datasource.sql;
+### ä¼ä¸šæ¨¡æ¿è„šæœ¬ ###
+> `è¯·æŒ‰é¡ºåºæ‰§è¡Œï¼Œå¹¶æ ¹æ®æœ¬åœ°çŽ¯å¢ƒé…ç½®`
+
+> \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_1000_ziker-agent.sql;
+
+> \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_2000_ziker-customer.sqlï¼›
+
+> \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_3000_ziker-wechat.sqlï¼›
+
+> \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_4000_ziker-session.sqlï¼›
