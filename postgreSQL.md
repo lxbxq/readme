@@ -99,6 +99,8 @@
 
 > `请按顺序执行，并根据本地环境配置`
 
+> \i D:/work/ziker/ziker/db/pg/enterprise/template/enterprise_database.sql;
+
 > \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_1000_ziker-agent.sql;
 
 > \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_2000_ziker-customer.sql；
