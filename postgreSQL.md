@@ -5,6 +5,7 @@
 
 > 安装程序存放在共享目录中：\\192.168.1.5\share\postgreSQL
 ## DDL
+
 ### 创建数据库
 
 > 语法为create database dbname;
@@ -18,6 +19,7 @@
 ### 默认使用模板库template1,可以手工指定template0
 
 > `create database db2 template template0`
+
 ### 复制库
 
 > `create database db3 template db2`
@@ -27,7 +29,9 @@
 > 语法为:\c dbname; 
 
 > `\c ziker;`
+
 ### 删除数据库
+
 >语法为:drop database [if exists] dbname;
 
 >`drop database db3;`
@@ -39,6 +43,7 @@
 >`create table wechat_agent (id int primary key not null,agent_name text not null);`
 ### 修改表
 ### 删除表
+
 >语法为 drop table table_name;
 
 >`drop table wechat_agent;`
@@ -51,10 +56,15 @@
 
 ### 常量
 ### 日期
+
 >`select current_date;`
+
 ### 时间
+
 >`select current_time;`
+
 ### 日期+时间
+
 >`select current_timestamp;`
 
 ## 文件执行
@@ -70,6 +80,7 @@
 
 ## 脚本 ##
 ### 共享库脚本 ###
+
 > `请按顺序执行,并根据本地环境修改路径。`
 
 > \i D:/work/ziker/ziker/db/pg/share/1.0/share_database.sql;'
@@ -80,7 +91,9 @@
 > \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_2000_ziker-user.sql;
 
 > \i D:/work/ziker/ziker/db/pg/share/1.0/ddl_3000_ziker-datasource.sql;
+
 ### 企业模板脚本 ###
+
 > `请按顺序执行，并根据本地环境配置`
 
 > \i D:/work/ziker/ziker/db/pg/enterprise/template/ddl_1000_ziker-agent.sql;
