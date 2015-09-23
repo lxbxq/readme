@@ -48,9 +48,9 @@
 
 > `9、created_time、updated_time类型为timestamp`
 
-> `status字段类型为varchar，长度为5`
+> `10、status字段类型为varchar，长度为5`
 
-> `gender字段表示性别，类型为varchar,长度为1`
+> `11、gender字段表示性别，类型为varchar,长度为1`
 
 ### 外键命名规范 ###
 
