@@ -4,6 +4,7 @@
 
 
 > 安装程序存放在共享目录中：\\192.168.1.5\share\postgreSQL
+
 ## DDL
 
 ### 创建数据库
@@ -41,7 +42,9 @@
 > 语法为：create table table_name(column1 datatype,column2 datatype,.....,columnN datatype,primary key (one or more columns));
 
 >`create table wechat_agent (id int primary key not null,agent_name text not null);`
+
 ### 修改表
+
 ### 删除表
 
 >语法为 drop table table_name;
